@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="xpay/css/jquery-ui.min.css?v=v1.13.2" type="text/css">
+    <link rel="stylesheet" href="xpay/css/select2.css" type="text/css">
+    <link rel="stylesheet" href="xpay/css/jquery.scrollbar.css" type="text/css">
+    <link rel="stylesheet" href="xpay/styles/oldCss/partners/default/main.css" type="text/css">
+
+    <link rel="stylesheet" href="xpay/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="xpay/css/keyboard.css" type="text/css">
+    <link rel="stylesheet" href="xpay/css/owl.carousel.min.css" type="text/css">
+
+    <script>
+        const queryString = window.location.search;
+
+        const urlParams = new URLSearchParams(queryString);
+
+        window.user_id = urlParams.get('user_id');
+        window.user_refid = 1;
+        window.referer_type = 6;
+        window.is_deposit = true;
+    </script>
+
+    <script async src="xpay/js/covery.js"></script>
+
+
+    <script type="text/javascript" src="xpay/js/jquery.js"></script>
+    <script type="text/javascript" src="xpay/js/common.js?v=1"></script>
+    <script type="text/javascript" src="xpay/js/lang.js"></script>
+    <script type="text/javascript" src="xpay/js/jquery-ui.js?v=v1.13.2"></script>
+    <script type="text/javascript" src="xpay/js/select2.js"></script>
+    <script type="text/javascript" src="xpay/js/jquery.scrollbar.js"></script>
+    <script type="text/javascript" src="xpay/js/owl.carousel.min.js"></script>
+
+
+    <script type="text/javascript" src="xpay/js/app_redirect.js"></script>
+    <script type="text/javascript" src="xpay/js/process.js?v=1712762251"></script>
+    <script type="text/javascript" src="xpay/js/alerts.js"></script>
+    <script type="text/javascript" src="xpay/js/metamask.js?v=1712762251"></script>
+    <script type="text/javascript" src="xpay/js/web3.min.js"></script>
+</head>
+
+<body id="payment_methods" class="payment-methods payment-methods--deposit desktop desktop_popup rtl">
+    <div class="payment-methods__wrap">
+        <script>
+
+
+            var isMobile = 0;
+            var userId = urlParams.get('user_id');
+            var isIOS = false;
+            const methodMessages = []
+            $('.header_title').text($('.header_title').text().replace('[[user_id]]', userId))
+        </script>
+        <header>
+            <div class="header_wrap">
+                <div class="wrap_header_text">
+                    <div class="header_title">إعادة تعبئة الحساب [[user_id]]</div>
+
+
+                    <script>
+
+
+                        var userId = urlParams.get('user_id');
+
+                        $('.header_title').text($('.header_title').text().replace('[[user_id]]', userId))
+                    </script>
+
+
+
+
+                    <div class="header_text">حدد نظام الدفع التي من خلالها تريد شحن حسابك:</div>
+                </div>
+                <div></div>
+
+
+                <div class="btn_wrap header-btns">
+                    <div class="btn_payment_method header-btns__item header-btns__type">أنواع أنظمة الدفع</div>
+                </div>
+
+
+
+                <div class="tools">
+                    <div class="without_geo without_geo_output-js active">طرق لتحديد الموقع الجغرافي</div>
+                </div>
+
+
+            </div>
+
+
+            <div class="warning">
+                <div class="warning-text">
+                    <div style="font-size:17px;font-weight:400;">إذا تأخر الدفع بعد إرسال الأموال ، يرجى التواصل مع الدعم التقني عبر البريد الالكتروني <span style="display: inline-block;color:inherit;font-size:17px;font-weight:500;"> <a href="mailto:processing-morocco@@1xbet-partners.co">processing-morocco@@1xbet-partners.co</a> </span></div>
+                </div>
+            </div>
+
+            <div class="warning">
+                <div class="warning-text">
+                    <div style="font-size:17px;font-weight:400;">إذا كنت من المهتمين بالتعاون و العمل معنا، يرجى التواصل من خلال البريد الإلكتروني التالي، يرجى الإنتباه أن مشاكل الدفع لا تؤخذ بعين الاعتبار<span style="display: inline-block;color:inherit;font-size:17px;font-weight:500;"><a href="mailto:paypartners-ma@@1xbet-partners.co">paypartners-ma@@1xbet-partners.co</a></span></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!--    -->
+            <!--        <div class="warning">-->
+            <!--            <div class="warning-text">-->
+            <!--                Le système Orange a aujourd'hui un problème technique. C'est pourquoi certains dépôts en attente n'ont pas été crédités. Veuillez patienter pendant le traitement de votre paiement dans les 24 heures. Nous nous excusons pour le retard.-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    -->
+            <!---->
+            <!--    -->
+            <!--        <div class="warning">-->
+            <!--            <div class="warning-text">-->
+            <!--                Chers parieurs,-->
+            <!--                On tient à vous informer que vu des problèmes techniques, l'Orange est temporairement indisponible pour le retrait.-->
+            <!--                Nous présentons nos excuses pour ce désagrément.-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    -->
+            <!--    -->
+            <!--        <div class="warning">-->
+            <!--            <div class="warning-text">-->
+            <!--                Chers parieurs,<br>-->
+            <!--                On tient à vous informer que vu des problèmes techniques, l'Orange est temporairement indisponible pour le retrait.-->
+            <!--                Nous présentons nos excuses pour ce désagrément.-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    -->
+
+            <!--
+        <div class="warning">
+            <div class="warning-text">
+                Kindly note that processing of Mpesa payments can take up to 24 hours. Apologies for inconveniences.
+            </div>
+        </div>
+    -->
+
+
+        </header>
+
+        <style>
+            .payment_item.ribbon.ribbon-recommended:after {
+                content: "\645 \648 \635 \649 \20 \628 \647 ";
+            }
+        </style>
+        <div class="container">
+            <aside>
+                <button class="close">
+                <span class="btn__ico_close"></span>
+            </button>
+                <div class="aside_wrap">
+                    <div class="aside_row" data-type="recommended">
+                        <div class="name_method">الطرق الموصى بها</div>
+                        <div class="number_payment_system" data-all_count="12" data-geo_count="12">12</div>
+                    </div>
+                    <div class="aside_row active" data-type="all_systems">
+                        <div class="name_method">جميع وسائل الدفع</div>
+                        <div class="number_payment_system" data-all_count="98" data-geo_count="80">80</div>
+                    </div>
+                    <div class="aside_row" data-type="bank_card">
+                        <div class="name_method">البطاقات المصرفية</div>
+                        <div class="number_payment_system" data-all_count="2" data-geo_count="2">2</div>
+                    </div>
+                    <div class="aside_row" data-type="e_wallet">
+                        <div class="name_method">المحافظ الإلكترونية</div>
+                        <div class="number_payment_system" data-all_count="9" data-geo_count="8">8</div>
+                    </div>
+                    <div class="aside_row" data-type="pay_system">
+                        <div class="name_method">أنظمة الدفع</div>
+                        <div class="number_payment_system" data-all_count="2" data-geo_count="2">2</div>
+                    </div>
+                    <div class="aside_row" data-type="ex_ecurrency">
+                        <div class="name_method">تحويل حوالة الإلكترونية</div>
+                        <div class="number_payment_system" data-all_count="17" data-geo_count="6">6</div>
+                    </div>
+                    <div class="aside_row" data-type="internet_banking">
+                        <div class="name_method">الخدمات المصرفية عبر الإنترنت</div>
+                        <div class="number_payment_system" data-all_count="2" data-geo_count="0">0</div>
+                    </div>
+                    <div class="aside_row" data-type="cep_bank">
+                        <div class="name_method">Cep Bank</div>
+                        <div class="number_payment_system" data-all_count="1" data-geo_count="0">0</div>
+                    </div>
+                    <div class="aside_row" data-type="bank_transfer">
+                        <div class="name_method">التحويل البنكي</div>
+                        <div class="number_payment_system" data-all_count="12" data-geo_count="10">10</div>
+                    </div>
+                    <div class="aside_row" data-type="crypto_currency">
+                        <div class="name_method">عملة الكريبتو</div>
+                        <div class="number_payment_system" data-all_count="39" data-geo_count="39">39</div>
+                    </div>
+                    <div class="aside_row" data-type="vouchers">
+                        <div class="name_method">القسائم الإلكترونية</div>
+                        <div class="number_payment_system" data-all_count="2" data-geo_count="1">1</div>
+                    </div>
+                </div>
+            </aside>
+            <script>
+                $('body > div').addClass('scrollbar-inner').scrollbar();
+                $('.aside_wrap').addClass('scrollbar-inner').scrollbar();
+            </script>
+
+            <div class="wrap_section">
+
+
+
+
+                <section data-id="recommended" id="group_recommended" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            الطرق الموصى بها </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 cih_new MA MA  payment-cell--recommended " id="cin_bank_transfer_1" data-icon="cih_new" data-agent="bt3.json" data-method="cin_bank_transfer" data-rawmethod="cin_bank_transfer" style="" data-type="bank_transfer" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/cih_new.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">CIH Mobile</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 attijari_bank_new MA MA  payment-cell--recommended " id="attijari_ruby_2" data-icon="attijari_bank_new" data-agent="bt3" data-method="attijari_ruby" data-rawmethod="attijari_ruby" style="" data-type="bank_transfer"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">سريع</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/attijari_bank_new.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">AWB Transfer</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 lbankalik_morocco_bt_webdefault MA MA  payment-cell--recommended " id="lbankalik_morocco_bt_webdefault_3" data-icon="lbankalik_morocco_bt_webdefault" data-agent="bt3" data-method="lbankalik_morocco_bt_webdefault"
+                                data-rawmethod="lbankalik_morocco_bt_webdefault" style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">سريع</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/lbankalik_morocco_bt_webdefault.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">b.LIK</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 airtm_black MA MA  payment-cell--recommended " id="airtm_4" data-icon="airtm_black" data-agent="airtm" data-method="airtm" data-rawmethod="airtm" style="" data-type="e_wallet" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">+35%</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/airtm_black.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">AIRTM</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 al_barid MA MA  payment-cell--recommended " id="al_barid_5" data-icon="al_barid" data-agent="bt3" data-method="al_barid" data-rawmethod="al_barid" style="" data-type="bank_transfer" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/al_barid.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Al Barid Bank</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 jibi_new MA MA  payment-cell--recommended " id="jibione_6" data-icon="jibi_new" data-agent="bt3" data-method="jibione" data-rawmethod="jibione" style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">سريع</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/jibi_new.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">JIBI</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 bmce_pearl MA MA  payment-cell--recommended " id="bmce_pearl_7" data-icon="bmce_pearl" data-agent="bt3" data-method="bmce_pearl" data-rawmethod="bmce_pearl" style="" data-type="bank_transfer" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/bmce_pearl.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">BMCE</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 we_pay_cih_bank MA MA  payment-cell--recommended " id="wepay_morocco_bt_webdefault_8" data-icon="we_pay_cih_bank" data-agent="bt3" data-method="wepay_morocco_bt_webdefault" data-rawmethod="wepay_morocco_bt_webdefault"
+                                style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/we_pay_cih_bank.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Wepay by CIH BANK</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 machrouh_1xbot MA MA  payment-cell--recommended " id="machrouh_1xbot_9" data-icon="machrouh_1xbot" data-agent="redirector" data-method="machrouh_1xbot" data-rawmethod="machrouh_1xbot" style="" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/machrouh_1xbot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Réapprovisionnement Rapide</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 benimad_icon MA MA  payment-cell--recommended " id="benimad_1xbot_10" data-icon="benimad_icon" data-agent="redirector" data-method="benimad_1xbot" data-rawmethod="benimad_1xbot" style="" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/benimad_icon.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Recharge Fiable</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 dabapay_morocco_bt_webdefault MA MA  payment-cell--recommended " id="dabapay_morocco_bt_webdefault_11" data-icon="dabapay_morocco_bt_webdefault" data-agent="bt3" data-method="dabapay_morocco_bt_webdefault" data-rawmethod="dabapay_morocco_bt_webdefault"
+                                style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/dabapay_morocco_bt_webdefault.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">DabaPay</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 pyypl_morocco_bt_webdefault MA MA  payment-cell--recommended " id="pyypl_morocco_bt_webdefault_12" data-icon="pyypl_morocco_bt_webdefault" data-agent="bt3" data-method="pyypl_morocco_bt_webdefault" data-rawmethod="pyypl_morocco_bt_webdefault"
+                                style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/pyypl_morocco_bt_webdefault.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Pyypl</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="bank_card" id="group_bank_card" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            البطاقات المصرفية </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 visa like like--green MA MA  payment-cell--bank_card " id="cards_usd_second_13" data-icon="visa" data-agent="diamondpay" data-method="cards_usd_second" data-rawmethod="visa" style="" data-type="bank_card" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/visa.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Visa</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 mastercard like like--green MA MA  payment-cell--bank_card " id="cards_usd_second_14" data-icon="mastercard" data-agent="diamondpay" data-method="cards_usd_second" data-rawmethod="mastercard" style="" data-type="bank_card"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/mastercard.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">MasterCard</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="e_wallet" id="group_e_wallet" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            المحافظ الإلكترونية </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 airtm_black MA MA  payment-cell--e_wallet " id="airtm_15" data-icon="airtm_black" data-agent="airtm" data-method="airtm" data-rawmethod="airtm" style="" data-type="e_wallet" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">+35%</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/airtm_black.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">AIRTM</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 moneygo MA MA  payment-cell--e_wallet " id="moneygowallet_16" data-icon="moneygo" data-agent="moneygo" data-method="moneygowallet" data-rawmethod="moneygowallet" style="" data-type="e_wallet" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/moneygo.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">MoneyGO</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 perfectmoney MA MA  payment-cell--e_wallet " id="perfectmoney_17" data-icon="perfectmoney" data-agent="perfectmoney" data-method="perfectmoney" data-rawmethod="perfectmoney" style="" data-type="e_wallet" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/perfectmoney.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Perfect Money</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 vcreditos is_geo MA MA  payment-cell--e_wallet " id="vcreditos_18" data-icon="vcreditos" data-agent="vcreditos" data-method="vcreditos" data-rawmethod="vcreditos" style="display:none" data-type="e_wallet" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/vcreditos.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Vcreditos</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 jeton MA MA  payment-cell--e_wallet " id="jeton_19" data-icon="jeton" data-agent="jeton" data-method="jeton" data-rawmethod="jeton" style="" data-type="e_wallet" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/jeton.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Jeton Wallet</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 sticpay MA MA  payment-cell--e_wallet " id="sticpay_exidna_20" data-icon="sticpay" data-agent="sticpay" data-method="sticpay_exidna" data-rawmethod="sticpay" style="" data-type="e_wallet" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">+30%</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/sticpay.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Sticpay</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 skrill MA MA  payment-cell--e_wallet " id="wallet_1_21" data-icon="skrill" data-agent="skrill2" data-method="wallet_1" data-rawmethod="skrill" style="" data-type="e_wallet" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/skrill.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Skrill</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 skrill1tap MA MA  payment-cell--e_wallet " id="wallettab_1_22" data-icon="skrill1tap" data-agent="skrill2" data-method="wallettab_1" data-rawmethod="skrill1tap" style="" data-type="e_wallet" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/skrill1tap.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Skrill 1-Tap</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 binancepay MA MA  payment-cell--e_wallet " id="binpay_usd_23" data-icon="binancepay" data-agent="betatransfer" data-method="binpay_usd" data-rawmethod="binancepay" style="" data-type="e_wallet" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/binancepay.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">BinancePay</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="pay_system" id="group_pay_system" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            أنظمة الدفع </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 payz MA MA  payment-cell--pay_system " id="ecopayz_24" data-icon="payz" data-agent="ecopayz" data-method="ecopayz" data-rawmethod="ecopayz" style="" data-type="pay_system" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/payz.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">‏ecoPayz</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 neteller MA MA  payment-cell--pay_system " id="neteller_25" data-icon="neteller" data-agent="neteller2" data-method="neteller" data-rawmethod="neteller" style="" data-type="pay_system" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/neteller.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Neteller</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="ex_ecurrency" id="group_ex_ecurrency" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            تحويل حوالة الإلكترونية </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 telegram is_geo MA MA  payment-cell--ex_ecurrency " id="telegram_26" data-icon="telegram" data-agent="redirector" data-method="telegram" data-rawmethod="telegram" style="display:none" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/telegram.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Webmoney-Qiwi UZ</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 redirector_qiwi_yandex is_geo MA MA  payment-cell--ex_ecurrency " id="redirector_qiwi_yandex_27" data-icon="redirector_qiwi_yandex" data-agent="redirector" data-method="redirector_qiwi_yandex" data-rawmethod="redirector_qiwi_yandex"
+                                style="display:none" data-type="ex_ecurrency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/redirector_qiwi_yandex.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">WebObmen UZ [bot]</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 web_exchange is_geo MA MA  payment-cell--ex_ecurrency " id="web_exchange_28" data-icon="web_exchange" data-agent="redirector" data-method="web_exchange" data-rawmethod="web_exchange" style="display:none" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/web_exchange.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">UzCards - 24/7 UZSpay</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 uzcard_exchange is_geo MA MA  payment-cell--ex_ecurrency " id="uzcard_exchange_29" data-icon="uzcard_exchange" data-agent="redirector" data-method="uzcard_exchange" data-rawmethod="uzcard_exchange" style="display:none"
+                                data-type="ex_ecurrency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/uzcard_exchange.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">UzCard ExChange</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 uzkassa is_geo MA MA  payment-cell--ex_ecurrency " id="uzkassa_30" data-icon="uzkassa" data-agent="redirector" data-method="uzkassa" data-rawmethod="uzkassa" style="display:none" data-type="ex_ecurrency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/uzkassa.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">1xbet Uzkassa</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 uzcard_1xbot is_geo MA MA  payment-cell--ex_ecurrency " id="uzcard_1xbot_31" data-icon="uzcard_1xbot" data-agent="redirector" data-method="uzcard_1xbot" data-rawmethod="uzcard_1xbot" style="display:none" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/uzcard_1xbot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Uzcard_1XBOT</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 uzcard_exchange_bot is_geo MA MA  payment-cell--ex_ecurrency " id="uzcard_exchange_bot_32" data-icon="uzcard_exchange_bot" data-agent="redirector" data-method="uzcard_exchange_bot" data-rawmethod="uzcard_exchange_bot"
+                                style="display:none" data-type="ex_ecurrency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/uzcard_exchange_bot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">UzCard Обмен</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 bettingpay_bot is_geo MA MA  payment-cell--ex_ecurrency " id="bettingpay_bot_33" data-icon="bettingpay_bot" data-agent="redirector" data-method="bettingpay_bot" data-rawmethod="bettingpay_bot" style="display:none"
+                                data-type="ex_ecurrency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/bettingpay_bot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">BettingPay 24/7</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 uzspayrobot is_geo MA MA  payment-cell--ex_ecurrency " id="uzspayrobot_34" data-icon="uzspayrobot" data-agent="redirector" data-method="uzspayrobot" data-rawmethod="uzspayrobot" style="display:none" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/uzspayrobot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">UZSPAYROBOT</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 uzobmennet is_geo MA MA  payment-cell--ex_ecurrency " id="uzobmennet_35" data-icon="uzobmennet" data-agent="redirector" data-method="uzobmennet" data-rawmethod="uzobmennet" style="display:none" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/uzobmennet.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">UzObmen.net</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 obmenuznetbot is_geo MA MA  payment-cell--ex_ecurrency " id="obmenuznetbot_36" data-icon="obmenuznetbot" data-agent="redirector" data-method="obmenuznetbot" data-rawmethod="obmenuznetbot" style="display:none"
+                                data-type="ex_ecurrency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/obmenuznetbot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">UZCARD и HUMO 0% 24/7</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 machrouh_1xbot MA MA  payment-cell--ex_ecurrency " id="machrouh_1xbot_37" data-icon="machrouh_1xbot" data-agent="redirector" data-method="machrouh_1xbot" data-rawmethod="machrouh_1xbot" style="" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/machrouh_1xbot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Réapprovisionnement Rapide</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 biyoud_bot_def MA MA  payment-cell--ex_ecurrency " id="biyoud_bot_def_38" data-icon="biyoud_bot_def" data-agent="redirector" data-method="biyoud_bot_def" data-rawmethod="biyoud_bot_def" style="" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/biyoud_bot_def.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Orangedepo</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 jarhmout_icon MA MA  payment-cell--ex_ecurrency " id="amine_bot_def_39" data-icon="jarhmout_icon" data-agent="redirector" data-method="amine_bot_def" data-rawmethod="amine_bot_def" style="" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/jarhmout_icon.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Speed Group</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 mouhoub_icon MA MA  payment-cell--ex_ecurrency " id="mouhoub_bot_def_40" data-icon="mouhoub_icon" data-agent="redirector" data-method="mouhoub_bot_def" data-rawmethod="mouhoub_bot_def" style="" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/mouhoub_icon.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Service de Dépôt</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 malak_1xbot MA MA  payment-cell--ex_ecurrency " id="malak_1xbot_41" data-icon="malak_1xbot" data-agent="redirector" data-method="malak_1xbot" data-rawmethod="malak_1xbot" style="" data-type="ex_ecurrency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/malak_1xbot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Recharge par ID</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 benimad_icon MA MA  payment-cell--ex_ecurrency " id="benimad_1xbot_42" data-icon="benimad_icon" data-agent="redirector" data-method="benimad_1xbot" data-rawmethod="benimad_1xbot" style="" data-type="ex_ecurrency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/benimad_icon.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Recharge Fiable</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="internet_banking" id="group_internet_banking" class="group_item" style="display:none;">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            الخدمات المصرفية عبر الإنترنت </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 spei is_geo MA MA  payment-cell--internet_banking " id="spei_43" data-icon="spei" data-agent="directa24" data-method="spei" data-rawmethod="spei" style="display:none" data-type="internet_banking" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/spei.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Spei</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 oxxo is_geo MA MA  payment-cell--internet_banking " id="oxxo_44" data-icon="oxxo" data-agent="directa24" data-method="oxxo" data-rawmethod="oxxo" style="display:none" data-type="internet_banking" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/oxxo.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">OXXO</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="cep_bank" id="group_cep_bank" class="group_item" style="display:none;">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            Cep Bank </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 cepbank_batuhan is_geo MA MA  payment-cell--cep_bank " id="cepbank_45" data-icon="cepbank_batuhan" data-agent="cepbank" data-method="cepbank" data-rawmethod="cepbank" style="display:none" data-type="cep_bank"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/cepbank_batuhan.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Hızlı Cepbank</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="bank_transfer" id="group_bank_transfer" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            التحويل البنكي </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 cih_new MA MA  payment-cell--bank_transfer " id="cin_bank_transfer_46" data-icon="cih_new" data-agent="bt3" data-method="cin_bank_transfer" data-rawmethod="cin_bank_transfer" style="" data-type="bank_transfer"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/cih_new.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">CIH Mobile</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 attijari_bank_new MA MA  payment-cell--bank_transfer " id="attijari_ruby_47" data-icon="attijari_bank_new" data-agent="bt3" data-method="attijari_ruby" data-rawmethod="attijari_ruby" style="" data-type="bank_transfer"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">سريع</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/attijari_bank_new.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">AWB Transfer</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 lbankalik_morocco_bt_webdefault MA MA  payment-cell--bank_transfer " id="lbankalik_morocco_bt_webdefault_48" data-icon="lbankalik_morocco_bt_webdefault" data-agent="bt3" data-method="lbankalik_morocco_bt_webdefault"
+                                data-rawmethod="lbankalik_morocco_bt_webdefault" style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">سريع</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/lbankalik_morocco_bt_webdefault.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">b.LIK</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 al_barid MA MA  payment-cell--bank_transfer " id="al_barid_49" data-icon="al_barid" data-agent="bt3" data-method="al_barid" data-rawmethod="al_barid" style="" data-type="bank_transfer" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/al_barid.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Al Barid Bank</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 paygiga is_geo MA MA  payment-cell--bank_transfer " id="paygiga_50" data-icon="paygiga" data-agent="paygiga" data-method="paygiga" data-rawmethod="paygiga" style="display:none" data-type="bank_transfer" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/paygiga.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">PayGiga - Anında Banka Havalesi</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 paygiga_qr is_geo MA MA  payment-cell--bank_transfer " id="paygiga_qr_51" data-icon="paygiga_qr" data-agent="paygiga" data-method="paygiga_qr" data-rawmethod="paygiga_qr" style="display:none" data-type="bank_transfer"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/paygiga_qr.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Hızlı QR</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 we_pay_cih_bank MA MA  payment-cell--bank_transfer " id="wepay_morocco_bt_webdefault_52" data-icon="we_pay_cih_bank" data-agent="bt3" data-method="wepay_morocco_bt_webdefault" data-rawmethod="wepay_morocco_bt_webdefault"
+                                style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/we_pay_cih_bank.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Wepay by CIH BANK</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 jibi_new MA MA  payment-cell--bank_transfer " id="jibione_53" data-icon="jibi_new" data-agent="bt3" data-method="jibione" data-rawmethod="jibione" style="" data-type="bank_transfer" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="cashback-ribbon-wrap">
+                                    <div class="cashback-ribbon">سريع</div>
+                                </div>
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/jibi_new.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">JIBI</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 bmce_pearl MA MA  payment-cell--bank_transfer " id="bmce_pearl_54" data-icon="bmce_pearl" data-agent="bt3" data-method="bmce_pearl" data-rawmethod="bmce_pearl" style="" data-type="bank_transfer" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/bmce_pearl.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">BMCE</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 dabapay_morocco_bt_webdefault MA MA  payment-cell--bank_transfer " id="dabapay_morocco_bt_webdefault_55" data-icon="dabapay_morocco_bt_webdefault" data-agent="bt3" data-method="dabapay_morocco_bt_webdefault" data-rawmethod="dabapay_morocco_bt_webdefault"
+                                style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/dabapay_morocco_bt_webdefault.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">DabaPay</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 cfgbank_morocco_bt_webdefault MA MA  payment-cell--bank_transfer " id="cfgbank_morocco_bt_webdefault_56" data-icon="cfgbank_morocco_bt_webdefault" data-agent="bt3" data-method="cfgbank_morocco_bt_webdefault" data-rawmethod="cfgbank_morocco_bt_webdefault"
+                                style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/cfgbank_morocco_bt_webdefault.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">CFG BANK</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 pyypl_morocco_bt_webdefault MA MA  payment-cell--bank_transfer " id="pyypl_morocco_bt_webdefault_57" data-icon="pyypl_morocco_bt_webdefault" data-agent="bt3" data-method="pyypl_morocco_bt_webdefault" data-rawmethod="pyypl_morocco_bt_webdefault"
+                                style="" data-type="bank_transfer" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/pyypl_morocco_bt_webdefault.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Pyypl</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="crypto_currency" id="group_crypto_currency" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            عملة الكريبتو </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 usdttrx MA MA  payment-cell--crypto_currency " id="usdttrx_58" data-icon="usdttrx" data-agent="cryptocurrencies2" data-method="usdttrx" data-rawmethod="usdttrx" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/usdttrx.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Tether on Tron</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 usdt MA MA  payment-cell--crypto_currency " id="usdt_59" data-icon="usdt" data-agent="cryptocurrencies2" data-method="usdt" data-rawmethod="usdt" data-metamask="1" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/usdt.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Tether on Ethereum</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 usdtbsc MA MA  payment-cell--crypto_currency " id="usdtbsc_60" data-icon="usdtbsc" data-agent="cryptocurrencies2" data-method="usdtbsc" data-rawmethod="usdtbsc" data-metamask="1" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/usdtbsc.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Tether on BSC</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 tron MA MA  payment-cell--crypto_currency " id="tron_61" data-icon="tron" data-agent="cryptocurrencies2" data-method="tron" data-rawmethod="tron" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/tron.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">TRON</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 bitcoin like like--green MA MA  payment-cell--crypto_currency " id="bitcoin_62" data-icon="bitcoin" data-agent="cryptocurrencies2" data-method="bitcoin" data-rawmethod="bitcoin" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/bitcoin.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">‏Bitcoin</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 binancecoinbsc MA MA  payment-cell--crypto_currency " id="binancecoinbsc_63" data-icon="binancecoinbsc" data-agent="cryptocurrencies2" data-method="binancecoinbsc" data-rawmethod="binancecoinbsc" data-metamask="1"
+                                style="" data-type="crypto_currency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/binancecoinbsc.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Binance Coin BSC </span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 ripple MA MA  payment-cell--crypto_currency " id="ripple_64" data-icon="ripple" data-agent="cryptocurrencies2" data-method="ripple" data-rawmethod="ripple" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/ripple.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">XRP</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 ethereum like like--green MA MA  payment-cell--crypto_currency " id="ethereum_65" data-icon="ethereum" data-agent="cryptocurrencies2" data-method="ethereum" data-rawmethod="ethereum" data-metamask="1" style=""
+                                data-type="crypto_currency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/ethereum.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Ethereum</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 litecoin like like--green MA MA  payment-cell--crypto_currency " id="litecoin_66" data-icon="litecoin" data-agent="cryptocurrencies2" data-method="litecoin" data-rawmethod="litecoin" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/litecoin.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Litecoin</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 dogecoin MA MA  payment-cell--crypto_currency " id="dogecoin_67" data-icon="dogecoin" data-agent="cryptocurrencies2" data-method="dogecoin" data-rawmethod="dogecoin" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/dogecoin.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Dogecoin</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 solana MA MA  payment-cell--crypto_currency " id="solana_68" data-icon="solana" data-agent="cryptocurrencies2" data-method="solana" data-rawmethod="solana" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/solana.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Solana</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 bitcoincash MA MA  payment-cell--crypto_currency " id="bitcoincash_69" data-icon="bitcoincash" data-agent="cryptocurrencies2" data-method="bitcoincash" data-rawmethod="bitcoincash" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/bitcoincash.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Bitcoin Cash</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 ethereumclassic MA MA  payment-cell--crypto_currency " id="ethereumclassic_70" data-icon="ethereumclassic" data-agent="cryptocurrencies2" data-method="ethereumclassic" data-rawmethod="ethereumclassic" style=""
+                                data-type="crypto_currency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/ethereumclassic.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Ethereum Classic</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 dash MA MA  payment-cell--crypto_currency " id="dash_71" data-icon="dash" data-agent="cryptocurrencies2" data-method="dash" data-rawmethod="dash" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/dash.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Dash</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 monero MA MA  payment-cell--crypto_currency " id="monero_72" data-icon="monero" data-agent="cryptocurrencies2" data-method="monero" data-rawmethod="monero" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/monero.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Monero</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 zcash MA MA  payment-cell--crypto_currency " id="zcash_73" data-icon="zcash" data-agent="cryptocurrencies2" data-method="zcash" data-rawmethod="zcash" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/zcash.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">ZCash</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 nem MA MA  payment-cell--crypto_currency " id="nem_74" data-icon="nem" data-agent="cryptocurrencies2" data-method="nem" data-rawmethod="nem" style="" data-type="crypto_currency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/nem.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">NEM</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 digibyte MA MA  payment-cell--crypto_currency " id="digibyte_75" data-icon="digibyte" data-agent="cryptocurrencies2" data-method="digibyte" data-rawmethod="digibyte" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/digibyte.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">DigiByte</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 verge MA MA  payment-cell--crypto_currency " id="verge_76" data-icon="verge" data-agent="cryptocurrencies2" data-method="verge" data-rawmethod="verge" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/verge.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Verge</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 qtum MA MA  payment-cell--crypto_currency " id="qtum_77" data-icon="qtum" data-agent="cryptocurrencies2" data-method="qtum" data-rawmethod="qtum" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/qtum.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">QTUM</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 cardano MA MA  payment-cell--crypto_currency " id="cardano_78" data-icon="cardano" data-agent="cryptocurrencies2" data-method="cardano" data-rawmethod="cardano" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/cardano.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Cardano</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 eos MA MA  payment-cell--crypto_currency " id="eos_79" data-icon="eos" data-agent="cryptocurrencies2" data-method="eos" data-rawmethod="eos" style="" data-type="crypto_currency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/eos.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">EOS</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 stellar MA MA  payment-cell--crypto_currency " id="stellar_80" data-icon="stellar" data-agent="cryptocurrencies2" data-method="stellar" data-rawmethod="stellar" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/stellar.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Stellar</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 polkadot MA MA  payment-cell--crypto_currency " id="polkadot_81" data-icon="polkadot" data-agent="cryptocurrencies2" data-method="polkadot" data-rawmethod="polkadot" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/polkadot.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Polkadot</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 toncoin MA MA  payment-cell--crypto_currency " id="toncoin_82" data-icon="toncoin" data-agent="cryptocurrencies2" data-method="toncoin" data-rawmethod="toncoin" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/toncoin.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Toncoin</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 avax MA MA  payment-cell--crypto_currency " id="avax_83" data-icon="avax" data-agent="cryptocurrencies2" data-method="avax" data-rawmethod="avax" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/avax.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Avalanche X-Chain</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 atom MA MA  payment-cell--crypto_currency " id="atom_84" data-icon="atom" data-agent="cryptocurrencies2" data-method="atom" data-rawmethod="atom" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/atom.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Cosmos Atom</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 usdc MA MA  payment-cell--crypto_currency " id="usdc_85" data-icon="usdc" data-agent="cryptocurrencies2" data-method="usdc" data-rawmethod="usdc" data-metamask="1" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/usdc.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">USD Coin on Ethereum</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 dai MA MA  payment-cell--crypto_currency " id="dai_86" data-icon="dai" data-agent="cryptocurrencies2" data-method="dai" data-rawmethod="dai" data-metamask="1" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/dai.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Dai on Ethereum</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 link MA MA  payment-cell--crypto_currency " id="link_87" data-icon="link" data-agent="cryptocurrencies2" data-method="link" data-rawmethod="link" data-metamask="1" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/link.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Chainlink on Ethereum</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 shiba MA MA  payment-cell--crypto_currency " id="shiba_88" data-icon="shiba" data-agent="cryptocurrencies2" data-method="shiba" data-rawmethod="shiba" data-metamask="1" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/shiba.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">SHIBA INU on Ethereum</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 usdtsolana MA MA  payment-cell--crypto_currency " id="usdtsolana_89" data-icon="usdtsolana" data-agent="cryptocurrencies2" data-method="usdtsolana" data-rawmethod="usdtsolana" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/usdtsolana.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Tether on Solana</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 usdcsolana MA MA  payment-cell--crypto_currency " id="usdcsolana_90" data-icon="usdcsolana" data-agent="cryptocurrencies2" data-method="usdcsolana" data-rawmethod="usdcsolana" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/usdcsolana.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">USD Coin on Solana</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 parissaintgermain MA MA  payment-cell--crypto_currency " id="parissaintgermain_91" data-icon="parissaintgermain" data-agent="cryptocurrencies2" data-method="parissaintgermain" data-rawmethod="parissaintgermain"
+                                data-metamask="1" style="" data-type="crypto_currency" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/parissaintgermain.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Paris Saint-Germain on BSC</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 juventus MA MA  payment-cell--crypto_currency " id="juventus_92" data-icon="juventus" data-agent="cryptocurrencies2" data-method="juventus" data-rawmethod="juventus" data-metamask="1" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/juventus.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Juventus on BSC</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 asroma MA MA  payment-cell--crypto_currency " id="asroma_93" data-icon="asroma" data-agent="cryptocurrencies2" data-method="asroma" data-rawmethod="asroma" data-metamask="1" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/asroma.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">AS Roma on BSC</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 shibabsc MA MA  payment-cell--crypto_currency " id="shibabsc_94" data-icon="shibabsc" data-agent="cryptocurrencies2" data-method="shibabsc" data-rawmethod="shibabsc" data-metamask="1" style="" data-type="crypto_currency"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/shibabsc.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">SHIBA INU on BSC</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 lightning MA MA  payment-cell--crypto_currency " id="lightning_95" data-icon="lightning" data-agent="cryptocurrencies2" data-method="lightning" data-rawmethod="lightning" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/lightning.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Bitcoin on Lightning Network</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 payler MA MA  payment-cell--crypto_currency " id="payler2default_96" data-icon="payler" data-agent="Payler2" data-method="payler2default" data-rawmethod="cryptopayments" style="" data-type="crypto_currency" data-restrictionmessage=""
+                                data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/payler.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Cryptopayments</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section data-id="vouchers" id="group_vouchers" class="group_item" style="">
+                    <div class="section-top-block">
+                    </div>
+                    <div class="section-block">
+                        <div class="section_name_method">
+                            القسائم الإلكترونية </div>
+
+                        <div style="" class="payment_wrap ">
+                            <div class="payment-cell payment_item r_1 pagoefectivo is_geo MA MA  payment-cell--vouchers " id="pagoefectivo_97" data-icon="pagoefectivo" data-agent="directa24" data-method="pagoefectivo" data-rawmethod="pagoefectivo" style="display:none" data-type="vouchers"
+                                data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/pagoefectivo.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Pago Efectivo</span>
+                                </div>
+
+                            </div>
+                            <div class="payment-cell payment_item r_1 jetoncash MA MA  payment-cell--vouchers " id="cash_98" data-icon="jetoncash" data-agent="jetoncash" data-method="cash" data-rawmethod="jetoncash" style="" data-type="vouchers" data-restrictionmessage="" data-restrictionmessage_link="">
+
+                                <div class="payment-cell__logo">
+                                    <div class="payment-cell__wrap">
+                                        <img src="./xpay/images/money/jetoncash.png" alt="" class="payment-cell__img">
+                                    </div>
+                                </div>
+                                <div class="payment_item__name payment-cell__name payment-cell-name ">
+                                    <span class="payment-cell-name__caption payment-cell-name__caption--is-title">Jeton Cash</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            if (typeof modules === "undefined") {
+                modules = {};
+            }
+            if (typeof modules.main === "undefined") {
+                modules.main = {};
+            }
+            const queryString = window.location.search;
+
+            const urlParams = new URLSearchParams(queryString);
+
+            modules.main.userId = urlParams.get('user_id');
+            modules.main.domain = '';
+
+            modules.main.type_operation = 'deposit';
+        });
+    </script>
+
+    <div class="modal-payment" id="metamask_install_modal">
+        <div class="modal_header">
+            <div class="metamask_logo"><img src="./xpay/images/MetaMask_Fox.svg" width="48" alt=""></div>
+            <div class="metamask_name">Metamask</div>
+        </div>
+        <div class="metamask_body">
+            <p>تعذر العثور على ملحق Metamask لمتصفحك</p>
+            <p>اضغط على زر "تثبيت" واتبع التعليمات لتثبيت Metamask</p>
+            <p>بمجرد تثبيت الامتداد، قم بتحديث الصفحة لتسجيل الدخول باستخدام Metamask</p>
+            <div class="browser_list">
+                <ul>
+                    <li><img src="./xpay/images/Google_Chrome_icon.svg" width="20" height="20" alt="">Google Chrome</li>
+                    <li><img src="./xpay/images/Firefox_logo.svg" width="20" height="20" alt="">Mozilla Firefox</li>
+                </ul>
+            </div>
+        </div>
+        <div class="metmask_modal_buttons">
+            <button class="payment_modal_btn" id="metamask_install_modal_btn_install">تثبيت</button>
+            <button class="payment_modal_btn metamask_install_modal_btn_close">إغلاق</button>
+        </div>
+    </div>
+
+    <input type="hidden" id="metamask-deposit-success-text" value="تم الدفع" data-title="بنجاح!">
+    <input type="hidden" id="metamask-deposit-rejected-text" value="تم إلغاء الدفع من قبل المستخدم" data-title="إلغاء">
+
+    <div class="payment-systems-modal-bg"></div>
+
+    <div class="fon_modal payment-methods__bg"></div>
+    <div id="before_preloader" class="payment-methods__preloader" style="display: none;">
+        <div class="preloader">
+            <div class="dot preloader__bar"></div>
+            <div class="dot preloader__bar"></div>
+            <div class="dot preloader__bar"></div>
+            <div class="dot preloader__bar"></div>
+            <div class="dot preloader__bar"></div>
+        </div>
+    </div>
+    <div id="alert_dialog"></div>
+</body>
+
+</html>
